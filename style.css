@@ -22,9 +22,13 @@ body {
     min-width: 25%;
     min-height: 25%;
     */
-    border: 5px solid black;
+    border: 5px solid gray;
     box-sizing: border-box;
     border-radius: 5px;
+}
+
+.pixelGray {
+    background-color: lightgray;
 }
 
 
