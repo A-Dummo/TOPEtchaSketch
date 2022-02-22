@@ -8,6 +8,11 @@ function clear() {
     const grid = document.querySelector("#grid-of-divs");
     const pixelAmount = Number(prompt("Amount of pixels"));
 
+    if (pixelAmount > 100) {
+        alert("Can't be greater than 100");
+        return;
+    }
+
     grid.innerHTML = "";
     populateGrid(grid, pixelAmount);
 }
