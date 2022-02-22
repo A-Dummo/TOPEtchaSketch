@@ -1,10 +1,15 @@
-function run() {
+function init() {
+    const grid = document.querySelector("#grid-of-divs");
+
+    populateGrid(grid, 16);
+}
+
+function clear() {
     const grid = document.querySelector("#grid-of-divs");
     const pixelAmount = Number(prompt("Amount of pixels"));
 
+    grid.innerHTML = "";
     populateGrid(grid, pixelAmount);
-
-
 }
 
 function populateGrid(etchGrid, pixelAmount) {
@@ -26,8 +31,8 @@ function populateGrid(etchGrid, pixelAmount) {
 const clearButton = document.querySelector('#clear');
 clearButton.addEventListener('click', () => {
     const grid = document.querySelector("#grid-of-divs");
-    grid.innerHTML = "";
-    run();
+    //grid.innerHTML = "";
+    clear();
 });
 
-run();
+init();
