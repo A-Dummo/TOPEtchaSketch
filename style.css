@@ -1,0 +1,14 @@
+#grid-of-divs {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.etchPixel {
+    /*
+    min-width: 25%;
+    min-height: 25%;
+    */
+    flex-wrap: wrap;
+}
+
+
