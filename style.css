@@ -22,7 +22,7 @@ body {
     min-width: 25%;
     min-height: 25%;
     */
-    border: 5px solid gray;
+    border: 2px solid gray;
     box-sizing: border-box;
     border-radius: 5px;
 }
