@@ -1,18 +1,26 @@
 function run() {
     const grid = document.querySelector("#grid-of-divs");
-    const n = Number(prompt());
-    const percentage = 1 / n * 100;
-    for (let i = 0; i < n * n; i++) {
-        grid.innerHTML += `<div class="etchPixel" style="min-width: ${percentage}%"></div>`;
+    const pixelAmount = Number(prompt("Amount of pixels"));
+
+    populateGrid(grid, pixelAmount);
+
+
+}
+
+function populateGrid(etchGrid, pixelAmount) {
+    const percentage = 100 / pixelAmount;
+    for (let i = 0; i < pixelAmount * pixelAmount; i++) {
+        const pixel = document.createElement('div');
+        pixel.classList.add("etchPixel");
+        pixel.setAttribute('style', `min-width: ${percentage}%`)
+
+        pixel.addEventListener('mouseover', () => {
+            pixel.classList.add("pixelGray");
+            console.log(i);
+        }, {once: true});
+
+        etchGrid.appendChild(pixel);
     }
 }
 
 run();
-
-const grids = document.querySelectorAll(".etchPixel");
-grids.forEach(item => {
-    item.addEventListener('mouseover', event => {
-        item.classList.add("pixelGray");
-        console.log(1);
-    });
-});
