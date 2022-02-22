@@ -23,4 +23,11 @@ function populateGrid(etchGrid, pixelAmount) {
     }
 }
 
+const clearButton = document.querySelector('#clear');
+clearButton.addEventListener('click', () => {
+    const grid = document.querySelector("#grid-of-divs");
+    grid.innerHTML = "";
+    run();
+});
+
 run();
